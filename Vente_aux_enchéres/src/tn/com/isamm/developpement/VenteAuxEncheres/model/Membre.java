@@ -34,6 +34,8 @@ public class Membre implements Serializable {
 	private String email;
 	@OneToMany(cascade = CascadeType.MERGE)
 	private List<Objet> objets;
+	@OneToMany(cascade = CascadeType.MERGE)
+	private List<Note> notes;
 	private static final long serialVersionUID = 1L;
 
 	public Membre() {
@@ -146,6 +148,26 @@ public class Membre implements Serializable {
 
 	public void setAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
+	}
+
+	public List<Note> getNotes() {
+		return notes;
+	}
+
+	public void setNotes(List<Note> notes) {
+		this.notes = notes;
+	}
+
+	public boolean isVendeur() {
+		return isVendeur;
+	}
+
+	public boolean isAcheteur() {
+		return isAcheteur;
+	}
+
+	public boolean isAdmin() {
+		return isAdmin;
 	}
 
 }

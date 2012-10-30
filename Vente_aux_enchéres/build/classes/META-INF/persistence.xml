@@ -6,6 +6,9 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>tn.com.isamm.developpement.VenteAuxEncheres.model.Membre</class>
 		<class>tn.com.isamm.developpement.VenteAuxEncheres.model.Objet</class>
+		<class>tn.com.isamm.developpement.VenteAuxEncheres.model.Note</class>
+		<class>tn.com.isamm.developpement.VenteAuxEncheres.model.Categorie</class>
+		<class>tn.com.isamm.developpement.VenteAuxEncheres.model.Pays</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.password" value="" />

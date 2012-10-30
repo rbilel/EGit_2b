@@ -38,6 +38,8 @@ public class Objet implements Serializable {
 	private Date dateFin;
 	@OneToOne(cascade = CascadeType.MERGE)
 	private Membre membre;
+	@OneToOne(cascade = CascadeType.MERGE)
+	private Categorie categorie;
 	private static final long serialVersionUID = 1L;
 
 	public Objet() {
@@ -130,6 +132,14 @@ public class Objet implements Serializable {
 
 	public void setDateFin(Date dateFin) {
 		this.dateFin = dateFin;
+	}
+
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
 	}
 	
 

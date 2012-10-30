@@ -16,7 +16,11 @@ public class Programme {
 		membre.setIdMbr(1);
 		membre.setNom("ELBEJI");
 		membre.setPrenom("Mohamed");
+		//Modifier membre 
 		membreDao.modifierMembre(membre);
+		//Supprimer membre
+		membreDao.findById(1);
+		membreDao.supprimerMembre(membre);
 	}
 
 }

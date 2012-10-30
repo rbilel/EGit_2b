@@ -13,7 +13,7 @@ public class Client2 {
 	private static InetAddress host;
     private static final int PORT = 1234;
 
-    
+    //UPDATE
     
 
     public static void main(String[] args) throws IOException

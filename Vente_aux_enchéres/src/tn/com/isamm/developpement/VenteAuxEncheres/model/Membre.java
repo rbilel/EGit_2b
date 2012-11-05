@@ -34,8 +34,14 @@ public class Membre implements Serializable {
 	private String email;
 	@OneToMany(cascade = CascadeType.MERGE)
 	private List<Objet> objets;
-	@OneToMany(cascade = CascadeType.MERGE)
-	private List<Note> notes;
+//	@OneToMany(cascade = CascadeType.MERGE)
+//	private List<Note> notes;
+	
+	@OneToOne(cascade = CascadeType.MERGE)
+	private Historique historique;
+
+	
+	
 	private static final long serialVersionUID = 1L;
 
 	public Membre() {
@@ -150,13 +156,13 @@ public class Membre implements Serializable {
 		this.isAdmin = isAdmin;
 	}
 
-	public List<Note> getNotes() {
-		return notes;
-	}
-
-	public void setNotes(List<Note> notes) {
-		this.notes = notes;
-	}
+//	public List<Note> getNotes() {
+//		return notes;
+//	}
+//
+//	public void setNotes(List<Note> notes) {
+//		this.notes = notes;
+//	}
 
 	public boolean isVendeur() {
 		return isVendeur;
@@ -170,4 +176,14 @@ public class Membre implements Serializable {
 		return isAdmin;
 	}
 
+	public Historique getHistorique() {
+		return historique;
+	}
+
+	public void setHistorique(Historique historique) {
+		this.historique = historique;
+	}
+
+	
+	
 }
